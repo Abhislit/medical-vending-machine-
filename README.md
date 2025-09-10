@@ -1,65 +1,78 @@
 
-1. Overview
-MediVend is an IoT-based smart medical vending machine that enables touchless medicine
-dispensing. Users can scan a QR code, browse medicines on a mobile-friendly website, pay via
-UPI/digital payment, and instantly receive medicines from the vending machine. The system
-integrates ESP32, Arduino, servo motors, and IoT APIs for real-time control and inventory tracking.
-2. Problem & Solution
-Problem Statement:
-- Lack of round-the-clock access to essential medicines in rural areas, highways, and emergencies.
-- Manual vending/medical counters lead to time delays, hygiene issues, and poor stock
-management.
-Solution:
-- A QR-enabled, contactless medicine vending machine with a web interface for browsing,
-selection, and payment.
-- Automated dispensing via ESP32 + Arduino controlled servos.
-- Real-time inventory updates and admin alerts for stock management.
-3. Logic & Workflow
-Data Collection: User selects medicines on the web interface; transaction/payment data captured.
-Processing: ESP32 validates payment and communicates with Arduino; servo motors and sensors
-handle dispensing.
-Output: Medicine is dispensed to the user; stock count updated in EEPROM database.
-User Side: Scan QR → Browse medicines → Add to cart → Pay → Collect medicines.
-Admin Side: Restock via /api/inventory; monitor inventory levels and system health.
-4. Tech Stack
-- Frontend: HTML, CSS, JavaScript (responsive web app with cart & payment UI)
-- Backend / IoT: ESP32 (C++ Arduino framework), WebServer library
-- Hardware: Arduino + Servo Motors + IR Sensors + LEDs + Buzzer
-- Database: EEPROM (on ESP32 for inventory persistence)
-- Communication: REST APIs hosted on ESP32
-5. Future Scope
-- Aadhaar-based user authentication
-- Doctor’s e-prescription verification
-- Solar power integration for rural/off-grid deployment# ESP32 Medicine Vending Machine Setup Guide
+
+# MediVend: IoT-Based Smart Medical Vending Machine
+
+## Overview
+
+MediVend is an IoT-powered, touchless medical vending machine that enables users to quickly and hygienically purchase medicines. Simply scan a QR code, select medicines on a mobile-friendly site, pay digitally, and collect your medicines—all controlled in real-time via ESP32, Arduino, and IoT APIs.
+
+---
+
+## Problem & Solution
+
+### The Problem
+- Limited 24/7 access to essential medicines, especially in rural or remote areas.
+- Manual counters cause delays, hygiene concerns, and inefficient stock management.
+
+### Our Solution
+- A QR-based, contactless medicine vending machine with a web interface for browsing, selection, and digital payment.
+- Automated dispensing using ESP32 and Arduino-controlled servo motors.
+- Real-time inventory tracking and automated admin notifications for restocking.
+
+---
+
+## System Workflow
+
+### User Workflow
+
+```mermaid
+flowchart TD
+    A[Scan QR Code] --> B[Browse & Select Medicines on Web App]
+    B --> C[Add to Cart & Pay Online]
+    C --> D[Payment Verified by ESP32]
+    D --> E[Medicine Dispensed by Vending Machine]
+    E --> F[Stock Updated in Database]
+    F --> G[User Collects Medicines]
+```
+
+### Admin Workflow
+
+```mermaid
+flowchart TD
+    H[Monitor Inventory Dashboard]
+    H --> I[Receive Low Stock Alerts]
+    I --> J[Restock Medicines via /api/inventory]
+    J --> H
+    H --> K[Monitor System Health]
+```
+
+---
+
+## Technology Stack
+
+- **Frontend:** HTML, CSS, JavaScript (mobile-optimized web app)
+- **Backend / IoT:** ESP32 (using the Arduino framework, WebServer library)
+- **Hardware:** Arduino, Servo Motors, IR Sensors, LEDs, Buzzer
+- **Database:** EEPROM on ESP32 for persistent inventory
+- **APIs:** REST APIs hosted on ESP32
+
+---
 
 ## Hardware Requirements
 
-### ESP32 Board
-- ESP32 DevKit C or similar
-- Minimum 520KB RAM, 4MB Flash
+- **ESP32 Board:** DevKit C or similar (min. 520KB RAM, 4MB Flash)
+- **10x Servo Motors** for dispensing
+- **Buzzer, LEDs, IR Sensors** for feedback and detection
+- **Power Supply:** 12V/5A for servos, 5V/2A for ESP32
+- **Miscellaneous:** Breadboard/PCB, jumper wires, resistors
 
-### Components 
-- **10x Servo Motors** (SG90 or MG996R) - for dispensing mechanisms
-- **1x Buzzer** - for audio feedback
-- **3x LEDs** - status indicators (built-in LED + 2 external)
-- **10x IR Sensors** (optional) - to detect dispensed items
-- **Resistors** - 220Ω for LEDs, 10kΩ for pull-ups
-- **Power Supply** - 12V/5A for servos, 5V/2A for ESP32
-- **Breadboard/PCB** - for connections
-- **Jumper Wires**
+---
 
-## Wiring Diagram
+## Future Enhancements
 
-```
-ESP32 Pin Connections:
-├── Servo Motors (PWM Control)
-│   ├── GPIO 13 → Servo 1 (Medicine Slot 1)
-│   ├── GPIO 12 → Servo 2 (Medicine Slot 2)
-│   ├── GPIO 14 → Servo 3 (Medicine Slot 3)
-│   ├── GPIO 27 → Servo 4 (Medicine Slot 4)
-│   ├── GPIO 26 → Servo 5 (Medicine Slot 5)
-│   ├── GPIO 25 → Servo 6 (Medicine Slot 6)
-│   ├── GPIO 33 → Servo 7 (Medicine Slot 7)
-│   ├── GPIO 32 → Servo 8 (Medicine Slot 8)
-│   ├── GPIO 35 → Servo 9 (Medicine Slot 9)
-│   └
+- Aadhaar-based user authentication
+- Doctor’s e-prescription verification
+- Solar power for off-grid deployments
+
+---
+
