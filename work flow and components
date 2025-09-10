@@ -1,3 +1,50 @@
+┌───────────────────────┐
+│ Scan QR Code on Machine │
+└────────────┬──────────┘
+             ▼
+┌────────────────────────────┐
+│ Mobile Web App Opens       │
+│ (Browse Medicines)         │
+└────────────┬───────────────┘
+             ▼
+┌────────────────────────────┐
+│ Select Medicines + Quantity│
+└────────────┬───────────────┘
+             ▼
+┌────────────────────────────┐
+│ Proceed to Online Payment  │
+└────────────┬───────────────┘
+             ▼
+  [Backend Validates Payment]
+             ▼
+  ┌───────────────────────────┐
+  │ If Payment = SUCCESS      │
+  └────────────┬──────────────┘
+               ▼
+┌────────────────────────────┐
+│ ESP32 Sends Command to     │
+│ Arduino to Dispense Items  │
+└────────────┬───────────────┘
+             ▼
+┌────────────────────────────┐
+│ Arduino Activates Servo(s) │
+│ to Dispense Medicines      │
+└────────────┬───────────────┘
+             ▼
+┌────────────────────────────┐
+│ IR Sensor Confirms Dispense│
+└────────────┬───────────────┘
+             ▼
+┌────────────────────────────┐
+│ ESP32 Updates Inventory DB │
+└────────────────────────────┘
+
+
+
+
+
+
+
 # ESP32 Medicine Vending Machine Setup Guide
 
 ## Hardware Requirementsr
