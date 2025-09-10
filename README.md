@@ -1,4 +1,11 @@
 
+<img width="541" height="335" alt="Screenshot 2025-09-10 205407" src="https://github.com/user-attachments/assets/98d46d14-7800-48b0-b6af-bdad43ba89e3" />
+<img width="922" height="403" alt="Screenshot 2025-09-10 205325" src="https://github.com/user-attachments/assets/377b97f4-747b-41c3-bb55-a9bddaf19175" />
+<img width="926" height="405" alt="Screenshot 2025-09-10 205148" src="https://github.com/user-attachments/assets/3feb764f-c7a5-4581-a215-3398835339eb" />
+<img width="1601" height="870" alt="image1" src="https://github.com/user-attachments/assets/efd28f42-a921-417b-a62c-047f4094b984" />
+<img width="1232" height="1044" alt="image 2" src="https://github.com/user-attachments/assets/dff41d8f-38e4-498e-8c08-0841f129c52d" />
+<img width="1582" height="930" alt="ima" src="https://github.com/user-attachments/assets/2fb85eee-83ac-4d89-a3dd-9ab2d61ce14b" />
+
 
 # MediVend: IoT-Based Smart Medical Vending Machine
 
@@ -11,7 +18,8 @@ MediVend is an IoT-powered, touchless medical vending machine that enables users
 ## Problem & Solution
 
 ### The Problem
-- Limited 24/7 access to essential medicines, especially in rural or remote areas.
+- Limited 24/7 access to essential medicines, especially in rural or remote areas.![Screenshot_20250911_011938_Chrome(2)](https://github.com/user-attachments/assets/3f34d664-d8dc-4f7c-944f-7eabfc0ab73b)
+
 - Manual counters cause delays, hygiene concerns, and inefficient stock management.
 
 ### Our Solution
@@ -26,7 +34,8 @@ MediVend is an IoT-powered, touchless medical vending machine that enables users
 ### User Workflow
 
 ```mermaid
-flowchart TD
+flowchart TD![Screenshot_20250911_011938_Chrome(2)](https://github.com/user-attachments/assets/97bc3c40-b7b8-4623-8438-17c1b697164d)
+
     A[Scan QR Code] --> B[Browse & Select Medicines on Web App]
     B --> C[Add to Cart & Pay Online]
     C --> D[Payment Verified by ESP32]
@@ -43,7 +52,8 @@ flowchart TD
     H --> I[Receive Low Stock Alerts]
     I --> J[Restock Medicines via /api/inventory]
     J --> H
-    H --> K[Monitor System Health]
+    H --> K[Monitor System Health]![Screenshot_20250911_011938_Chrome(2)](https://github.com/user-attachments/assets/765712f1-fa8c-43ec-9e9a-860efb818a6c)
+
 ```
 
 ---
