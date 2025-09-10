@@ -18,7 +18,7 @@ MediVend is an IoT-powered, touchless medical vending machine that enables users
 ## Problem & Solution
 
 ### The Problem
-- Limited 24/7 access to essential medicines, especially in rural or remote areas.![Screenshot_20250911_011938_Chrome(2)](https://github.com/user-attachments/assets/3f34d664-d8dc-4f7c-944f-7eabfc0ab73b)
+- Limited 24/7 access to essential medicines, especially in rural or remote areas.!
 
 - Manual counters cause delays, hygiene concerns, and inefficient stock management.
 
