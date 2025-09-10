@@ -33,7 +33,7 @@ MediVend is an IoT-powered, touchless medical vending machine that enables users
 
 ### User Workflow
 
-```mermaid
+[```mermaid
 flowchart TD![Screenshot_20250911_011938_Chrome(2)](https://github.com/user-attachments/assets/97bc3c40-b7b8-4623-8438-17c1b697164d)
 
     A[Scan QR Code] --> B[Browse & Select Medicines on Web App]
@@ -42,7 +42,7 @@ flowchart TD![Screenshot_20250911_011938_Chrome(2)](https://github.com/user-atta
     D --> E[Medicine Dispensed by Vending Machine]
     E --> F[Stock Updated in Database]
     F --> G[User Collects Medicines]
-```
+```](https://www.mermaidchart.com/app/projects/e9c2126a-ba20-4d1f-ad5a-42eebda2b1a4/diagrams/82db50a2-8b5a-4390-b297-93e3e34820f0/version/v0.1/edit)
 
 ### Admin Workflow
 
